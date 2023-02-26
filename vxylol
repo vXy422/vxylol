@@ -1,0 +1,607 @@
+local nicks = {"stasaltakk","Adil_aid"}
+local player = game.Players.LocalPlayer
+if not table.find(nicks,player.Name) then
+player:Kick("try againg nish")
+end
+local playerlist = {};
+for i,v in pairs(game.Players:GetPlayers())do
+table.insert(playerlist,v.Name)
+end
+function PlayerJoined(text)
+    game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage", {
+        Text = text;
+        Color = Color3.fromRGB(0, 85, 255);
+        Font = Enum.Font.Oswald;
+        TextSize = 25
+    })
+end
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "vxy lol hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Tab = Window:MakeTab({Name = "Credit",Icon = "rbxassetid://4483345998",PremiumOnly = false})
+local Section = Tab:AddSection({Name = "Owner"})
+Tab:AddLabel("vXy#6315")
+local Section = Tab:AddSection({Name = "Scripter"})
+Tab:AddLabel("DoutorQuem#1092")
+local Tab = Window:MakeTab({Name = "Stack",Icon = "rbxassetid://4483345998",PremiumOnly = false})
+local Section = Tab:AddSection({Name = "Stack"})
+Section:AddToggle({Name = "Auto C",Default = false,Callback = function(s)
+g = s
+while g do
+task.wait()
+local args = {[1] = {[1] = "Skill_Punch",[2] = "Left"}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+local args = {[1] = {[1] = "Skill_Punch",[2] = "Right"}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end
+end})
+Section:AddToggle({Name = "Stack",Default = false,Callback = function(s)
+g = s
+while g do
+wait()
+local args = {[1] = {[1] = "Skill_SpherePunch",[2] = Vector3.new(x, 1000000000000000000000, z)}} game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end
+end})
+local Tab = Window:MakeTab({Name = "x4 Cbring",Icon = "rbxassetid://4483345998",PremiumOnly = false})
+local Section = Tab:AddSection({Name = "x4 Cbring"})
+Tab:AddDropdown({Name = "CBring1",Default = game.Players.LocalPlayer.Name, Options = playerlist,Callback = function(new)
+    PlayerChosen = new;
+end})
+Tab:AddToggle({Name = "CBring1",Default = false,Callback = function(SlonGay)
+Gay = SlonGay
+while Gay do
+task.wait()
+pcall(function()
+if not game.Players[PlayerChosen].Character:FindFirstChild("ForceField") or
+game.Players.LocalPlayer.Character:FindFirstChild("ForceField") then
+game.Players[PlayerChosen].Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+end)
+end
+end})
+Tab:AddDropdown({Name = "CBring2",Default = game.Players.LocalPlayer.Name, Options = playerlist,Callback = function(new)
+    PlayerChosen1 = new;
+end})
+Tab:AddToggle({Name = "CBring2",Default = false,Callback = function(SlonGay)
+Gay = SlonGay
+while Gay do
+task.wait()
+pcall(function()
+if not game.Players[PlayerChosen1].Character:FindFirstChild("ForceField") or
+game.Players.LocalPlayer.Character:FindFirstChild("ForceField") then
+game.Players[PlayerChosen1].Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+end)
+end
+end})
+Tab:AddDropdown({Name = "CBring3",Default = game.Players.LocalPlayer.Name, Options = playerlist,Callback = function(new)
+    PlayerChosen2 = new;
+end})
+Tab:AddToggle({Name = "CBring3",Default = false,Callback = function(SlonGay)
+Gay = SlonGay
+while Gay do
+task.wait()
+pcall(function()
+if not game.Players[PlayerChosen2].Character:FindFirstChild("ForceField") or
+game.Players.LocalPlayer.Character:FindFirstChild("ForceField") then
+game.Players[PlayerChosen2].Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+end)
+end
+end})
+Tab:AddDropdown({Name = "CBring4",Default = game.Players.LocalPlayer.Name, Options = playerlist,Callback = function(new)
+    PlayerChosen3 = new;
+end})
+Tab:AddToggle({Name = "CBring4",Default = false,Callback = function(SlonGay)
+Gay = SlonGay
+while Gay do
+task.wait()
+pcall(function()
+if not game.Players[PlayerChosen3].Character:FindFirstChild("ForceField") or
+game.Players.LocalPlayer.Character:FindFirstChild("ForceField") then
+game.Players[PlayerChosen3].Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+end)
+end
+end})
+local Tab = Window:MakeTab({Name = "Farm",Icon = "rbxassetid://4483345998",PremiumOnly = false})
+local Section = Tab:AddSection({Name = "Farm"})
+Section:AddButton({Name = "10T BT + FS 10T",Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-279, 281, 1000)
+wait(0.5)
+game.Players.LocalPlayer.Character.UpperTorso.Waist:remove()
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-363, 15735, -3)
+_G.on = 1
+while _G.on == 1 do
+task.wait()
+local args = {[1] = {[1] = "+FS6"}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end
+end})
+Section:AddButton({Name = "10T BT + PP 1B",Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-279, 281, 1001)
+wait(0.5)
+game.Players.LocalPlayer.Character.UpperTorso.Waist:remove()
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Main.TrainingArea.PPTrainingPart2.CFrame
+_G.on = 1
+while _G.on == 1 do
+task.wait()
+local args = {[1] = {[1] = "+PP4"}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end
+end})
+Section:AddButton({Name = "10T BT + PP 1QA",Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-279, 281, 1001)
+wait(0.5)
+game.Players.LocalPlayer.Character.UpperTorso.Waist:remove()
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2544, 5412, -495)
+_G.on = 1
+while _G.on == 1 do
+task.wait()
+local args = {[1] = {[1] = "+PP6"}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end
+end})
+Tab:AddButton({Name = "Black Hub",Callback = function()
+   loadstring(game:HttpGet('https://pastebin.com/raw/D9btNZUr', true))()	
+end})
+Tab:AddButton({Name = "stat checker",Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/videware/SPTS_Stats/main/loadstring.lua", true))()	
+end})
+local Tab = Window:MakeTab({Name = "Respawn",Icon = "rbxassetid://4483345998",PremiumOnly = false})
+local Section = Tab:AddSection({Name = "Respawn"})
+Tab:AddBind({Name = "Respawn",Default = Enum.KeyCode.P,Hold = false,Callback = function()
+local j = game.Players.LocalPlayer.Character:GetPrimaryPartCFrame()
+game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+task.wait(1.7)
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(j)
+task.wait()
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(j)
+task.wait()
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(j)
+end})
+Tab:AddToggle({
+Name = "Respawn 50Hp(Kick)",
+Default = false,
+Callback = function(lol)
+kek = lol while kek do task.wait()
+game.Lighting.Blur.Enabled = false
+game.Players.LocalPlayer.PlayerGui.IntroGui.Enabled = false
+game.Players.LocalPlayer.PlayerGui.ScreenGui.Enabled = true
+pcall( function()
+if
+game.Players.LocalPlayer.Character.Humanoid.Health <
+game.Players.LocalPlayer.Character.Humanoid.MaxHealth * .50
+then
+game.Players.LocalPlayer.Character:Destroy()
+task.wait()
+game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+end
+end
+)
+end
+end
+})
+Section:AddToggle({Name = "Respawn 80Hp (Kick)",default = false,Callback = function(da)
+ba = da
+while ba do task.wait()
+game.Lighting.Blur.Enabled = false
+game.Players.LocalPlayer.PlayerGui.IntroGui.Enabled = false
+game.Players.LocalPlayer.PlayerGui.ScreenGui.Enabled = true
+pcall(
+function()
+if
+game.Players.LocalPlayer.Character.Humanoid.Health <
+game.Players.LocalPlayer.Character.Humanoid.MaxHealth * .80
+then
+local j = game.Players.LocalPlayer.Character:GetPrimaryPartCFrame()
+game.Players.LocalPlayer.Character:Destroy()
+game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+task.wait(1.7)
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(j)
+task.wait()
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(j)
+task.wait()
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(j)
+end
+end
+)
+end
+end})
+Section:AddToggle({Name = "Respawn 90Hp (Kick)",default = false,Callback = function(da)
+ba = da
+while ba do task.wait()
+game.Lighting.Blur.Enabled = false
+game.Players.LocalPlayer.PlayerGui.IntroGui.Enabled = false
+game.Players.LocalPlayer.PlayerGui.ScreenGui.Enabled = true
+pcall(
+function()
+if
+game.Players.LocalPlayer.Character.Humanoid.Health <
+game.Players.LocalPlayer.Character.Humanoid.MaxHealth * .90
+then
+local j = game.Players.LocalPlayer.Character:GetPrimaryPartCFrame()
+game.Players.LocalPlayer.Character:Destroy()
+game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+task.wait(1.7)
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(j)
+task.wait()
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(j)
+task.wait()
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(j)
+end
+end
+)
+end
+end})
+Tab:AddToggle({
+Name = "Respawn 99Hp",
+Default = false,
+Callback = function(lol)
+kek = lol while kek do task.wait()
+game.Lighting.Blur.Enabled = false
+game.Players.LocalPlayer.PlayerGui.IntroGui.Enabled = false
+game.Players.LocalPlayer.PlayerGui.ScreenGui.Enabled = true
+pcall( function()
+if
+game.Players.LocalPlayer.Character.Humanoid.Health <
+game.Players.LocalPlayer.Character.Humanoid.MaxHealth * .99
+then
+game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+end
+end
+)
+end
+end
+})
+Section:AddToggle({Name = "Respawn 70Hp (No Kick)",default = false,Callback = function(da)
+ba = da
+while ba do task.wait()
+game.Lighting.Blur.Enabled = false
+game.Players.LocalPlayer.PlayerGui.IntroGui.Enabled = false
+game.Players.LocalPlayer.PlayerGui.ScreenGui.Enabled = true
+pcall(
+function()
+if
+game.Players.LocalPlayer.Character.Humanoid.Health <
+game.Players.LocalPlayer.Character.Humanoid.MaxHealth * .70
+then
+local j = game.Players.LocalPlayer.Character:GetPrimaryPartCFrame()
+game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+task.wait(1.7)
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(j)
+task.wait()
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(j)
+task.wait()
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(j)
+end
+end
+)
+end
+end})
+Section:AddToggle({Name = "Respawn 80Hp (No Kick)",default = false,Callback = function(da)
+ba = da
+while ba do task.wait()
+game.Lighting.Blur.Enabled = false
+game.Players.LocalPlayer.PlayerGui.IntroGui.Enabled = false
+game.Players.LocalPlayer.PlayerGui.ScreenGui.Enabled = true
+pcall(
+function()
+if
+game.Players.LocalPlayer.Character.Humanoid.Health <
+game.Players.LocalPlayer.Character.Humanoid.MaxHealth * .80
+then
+local j = game.Players.LocalPlayer.Character:GetPrimaryPartCFrame()
+game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+task.wait(1.7)
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(j)
+task.wait()
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(j)
+task.wait()
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(j)
+end
+end
+)
+end
+end})
+local Tab = Window:MakeTab({Name = "Fun",Icon = "rbxassetid://4483345998",PremiumOnly = false})
+local Section = Tab:AddSection({Name = "RGB"})
+Section:AddToggle({Name = "RGB Weight",Default = false,Callback = function(s)
+g = s
+while g do
+task.wait()
+local args = {[1] = {[1] = "Weight",[2] = "Weight1"}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait()
+local args = {[1] = {[1] = "Weight",[2] = "Weight2"}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait()
+local args = {[1] = {[1] = "Weight",[2] = "Weight3"}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait()
+local args = {[1] = {[1] = "Weight",[2] = "Weight4"}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end
+end})
+Section:AddToggle({Name = "RGB Rank",Default = false,Callback = function(pon)
+s = pon
+while s do
+task.wait()
+local args = {[1] = {[1] = "ChangeRankEmblem",[2] = 1}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait()
+local args = {[1] = {[1] = "ChangeRankEmblem",[2] = 2}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait()
+local args = {[1] = {[1] = "ChangeRankEmblem",[2] = 3}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait()
+local args = {[1] = {[1] = "ChangeRankEmblem",[2] = 4}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait()
+local args = {[1] = {[1] = "ChangeRankEmblem",[2] = 5}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait()
+local args = {[1] = {[1] = "ChangeRankEmblem",[2] = 6}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait()
+local args = {[1] = {[1] = "ChangeRankEmblem",[2] = 7}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait()
+local args = {[1] = {[1] = "ChangeRankEmblem",[2] = 8}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait()
+local args = {[1] = {[1] = "ChangeRankEmblem",[2] = 9}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait()
+local args = {[1] = {[1] = "ChangeRankEmblem",[2] = 10}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait()
+end
+end})
+local Section = Tab:AddSection({Name = "Fun"})
+Tab:AddDropdown({Name = "Player",Default = game.Players.LocalPlayer.Name, Options = playerlist,Callback = function(new)
+    PlayerChosen4 = new;
+end})
+Section:AddToggle({Name = "TpSpam",Default = false,Callback = function(f)
+pon = f
+while pon do
+task.wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[PlayerChosen4].Character.HumanoidRootPart.CFrame
+end
+end})
+Section:AddToggle({Name = "Lag Server",Default = false,Callback = function(v)
+nony5 = v
+while nony5 do
+task.wait()
+local args = {[1] = {[1] = "Skill_KillingIntent_Start"}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end
+end})
+local Section = Tab:AddSection({Name = "Aura"})
+Section:AddToggle({Name = "aura delite",Default = false,Callback = function(aura1)
+aura2 = aura1
+    while aura2 do task.wait()
+        pcall(function()
+            game.Players.LocalPlayer.character.LeftHand.Aura1: Destroy()
+            game.Players.LocalPlayer.character.RightHand.Aura1: Destroy()
+            game.Players.LocalPlayer.character.LeftHand.Aura2: Destroy()
+            game.Players.LocalPlayer.character.RightHand.Aura2: Destroy()
+            game.Players.LocalPlayer.character.LeftUpperLeg.Aura1: Destroy()
+            game.Players.LocalPlayer.character.RightUpperLeg.Aura1: Destroy()
+            game.Players.LocalPlayer.character.UpperTorso.Aura1: Destroy()
+            game.Players.LocalPlayer.character.UpperTorso.Aura2: Destroy()
+        end)
+    end
+end})
+local PlayerChosen;
+local drop = Tab:AddDropdown({
+Name = "Player",
+Default = game.Players.LocalPlayer.Name,
+Options = playerlist,
+Callback = function(ebal)
+ghoul1 = ebal;
+end
+})
+Tab:AddSlider({
+Name = "Gravity",
+Min = 0,
+Max = 1000,
+Default = 197,
+Color = Color3.fromRGB(0,0,0),
+Increment = 1,
+ValueName = ".",
+Callback = function(okda)
+game.Workspace.Gravity = (okda)
+end    
+})
+Tab:AddToggle({
+Name = "Sit Head",
+Default = false,
+Callback = function(lol)
+kek = lol while kek do task.wait()
+pcall(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[ghoul1].Character.HumanoidRootPart.CFrame * CFrame.new(0,0+2,0+1)
+game.Players.LocalPlayer.Character.Humanoid.Sit = true    
+end)
+end
+end
+})
+Tab:AddButton({
+Name = "Earreap",
+Callback = function()
+pcall(function()
+for i, v in pairs(game.Players.LocalPlayer.Character.Head:GetChildren()) do
+if v:IsA("Sound") then
+v:Play()
+end
+end
+end)  
+end
+})
+
+Tab:AddToggle({Name = "TpVPizdy",Default = false,Callback = function(s)
+g = s
+while g do
+wait()
+game.Workspace.Main.SuperVillainREPLeaderBoardPart.CFrame = CFrame.new(1000000, 1000000, 1000000)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1000000, 1000010, 1000000)
+end
+end})
+Tab:AddToggle({
+Name = "AutoRemove FF",
+Default = false,
+Callback = function(lol)
+kek = lol while kek do task.wait()
+if game.Players.LocalPlayer.Character:FindFirstChild('ForceField') then game.Players.LocalPlayer.Character.ForceField:Destroy()
+end
+end
+end
+})
+local Section = Tab:AddSection({Name = "Psychic"})
+Tab:AddBind({Name = "Anti Pxp",Default = Enum.KeyCode.P,Hold = false,Callback = function()
+game.Players.LocalPlayer.Character.Humanoid.Animator:Destroy()
+end})
+Tab:AddDropdown({Name = "Player",Default = game.Players.LocalPlayer.Name, Options = playerlist,Callback = function(new)
+    PlayerChosen5 = new;
+end})
+Section:AddToggle({Name = "TpSpam",Default = false, Callback = function(s)
+g = s
+while g do
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[PlayerChosen5].Character.HumanoidRootPart.CFrame
+end
+end})
+Section:AddToggle({Name = "PP One User",Default = false,Callback = function(v)
+f = v
+while f do
+task.wait()
+local args = {[1] = {[1] = "Skill_SoulAttack_Start",[2] = game.Players[PlayerChosen5]}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+local args = {[1] = {[1] = "Skill_SoulAttack_End"}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end
+end})
+Section:AddToggle({Name = "SoulReap One User",Default = false,Callback = function(v)
+Dolboeb5 = v
+while Dolboeb5 do
+task.wait()
+local args = {[1] = {[1] = "Skill_SoulReap",[2] = game.Players[PlayerChosen5]}}game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end
+end})
+Tab:AddToggle({
+Name = "HellFire One User",
+Default = false,
+Callback = function(lol)
+kek = lol while kek do task.wait()
+game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_DevilFlame",game.Players[PlayerChosen]})
+end
+end
+})
+Tab:AddToggle({
+Name = "SoulReap All Users",
+Default = false,
+Callback = function(lol)
+kek = lol while kek do task.wait()
+for i,v in pairs(game.Players:GetPlayers()) do
+local Random = game.Players:GetPlayers()[math.random(1,#game.Players:GetPlayers())]
+if Random.PrivateStats.PsychicPower.Value <= game:GetService("Players").LocalPlayer.PrivateStats.PsychicPower.Value * 1000 then
+for i,v in pairs(game.Players:GetPlayers()) do
+game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulReap",game.Players[v.Name]})
+end
+end
+end
+end
+end
+})
+Tab:AddToggle({
+Name = "SoulAttack All Users",
+Default = false,
+Callback = function(lol)
+kek = lol while kek do task.wait()
+for i,v in pairs(game.Players:GetPlayers()) do
+local Random = game.Players:GetPlayers()[math.random(1,#game.Players:GetPlayers())]
+if Random.PrivateStats.PsychicPower.Value <= game:GetService("Players").LocalPlayer.PrivateStats.PsychicPower.Value * 100 then
+game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[v.Name]})
+game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+end
+end
+end
+end
+})
+local Tab = Window:MakeTab({Name = "aditional functision",Icon = "rbxassetid://4483345998",PremiumOnly = false})
+local Section = Tab:AddSection({Name = "functision"})
+Tab:AddToggle({
+Name = "Spam R",
+Default = false,
+Callback = function(lol)
+kek = lol while kek do task.wait()
+local args = {[1] = {[1] = "Skill_SpherePunch", [2] = Vector3.new(x,999999,z) } } game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))	
+end
+end
+})
+Tab:AddToggle({
+Name = "Auto C",
+Default = false,
+Callback = function(lol)
+kek = lol while kek do task.wait()
+local args = { [1] = { [1] = "Skill_Punch", [2] = "Left" } } game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+local args = { [1] = {  [1] = "Skill_Punch", [2] = "Right" } } game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end
+end
+})
+Tab:AddToggle({
+Name = "Spam F",
+Default = false,
+Callback = function(lol)
+kek = lol while kek do task.wait()
+local args = {  [1] = {  [1] = "Skill_BulletPunch",   [2] = "Left",   [3] = Vector3.new(x, 99999, z)  } } game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end
+end
+})
+Tab:AddButton({
+Name = "RRHand",
+Callback = function()
+game.Players.LocalPlayer.Character.RightHand.RightWrist:remove()
+end
+})
+Tab:AddToggle({
+Name = "Stack All Users",
+Default = false,
+Callback = function(lol)
+kek = lol while kek do task.wait()
+pcall( function()			
+local Random = game.Players:GetPlayers()[math.random(1,#game.Players:GetPlayers())]
+if Random.PrivateStats.BodyToughness.Value <= game:GetService("Players").LocalPlayer.PrivateStats.FistStrength.Value * 2 then
+if Random.Character.Humanoid.Health ~= 0 then
+if not Random.Character:FindFirstChild("SafeZoneShield") then 
+local x = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.x
+local z = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.z
+local x2 = Random.Character.HumanoidRootPart.Position.x
+local y = Random.Character.HumanoidRootPart.Position.y
+local z2 = Random.Character.HumanoidRootPart.Position.z
+local args = {[1] = {[1] = "Skill_SpherePunch",[2] = Vector3.new(x, 10000, z)}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+for i, v in ipairs (game:GetService("Workspace").Storage:GetChildren()) do
+if v.Name == Sphere then
+v.CFrame = CFrame.new(x2, y, z2)
+end
+end
+end
+end			
+end			
+end)
+end
+end
+})
+Tab:AddButton({
+Name = "RepScript",
+Callback = function()
+game.Players.LocalPlayer.Character.Head.NameBbGui.NameTxt:Destroy()
+end
+})
+Tab:AddBind({Name = "repScript",Default = Enum.KeyCode.Q,Hold = false,Callback = function()
+game.Players.LocalPlayer.Character.Head.NameBbGui.NameTxt:Destroy()
+end})

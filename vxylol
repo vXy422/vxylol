@@ -1,4 +1,4 @@
-local nicks = {"stasaltakk","Adil_aid"}
+local nicks = {"stasaltakk","Adil_aid","Quphang1"}
 local player = game.Players.LocalPlayer
 if not table.find(nicks,player.Name) then
 player:Kick("try againg nish")
